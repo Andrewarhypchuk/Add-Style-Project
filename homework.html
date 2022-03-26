@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit/Style</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div  id='container' class="container">
+        <div  id='top-block' class="block top-block">
+            <div id='top-block-text-only'>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, doloremque?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, doloremque?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, doloremque?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, doloremque?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, doloremque?</p>
+        </div>
+        </div>
+        <div class="center-block">
+           <button class="blue2" id="button__edit"># Edit #</button>
+           <button class="blue2" id="button__style"># Style #</button>
+        </div>
+        <div class="block bottom-block">
+            <div id="edit-block" class="none">
+                <textarea id="edit-area" class="edit-area"></textarea>
+                <input type="button" class="blue2" id="addTableOrList" value="Add Table or List">
+                <input type="button" class="blue2" id="save"  value="Save the Changes">
+            </div>
+            <div  id='style-block' class="none">
+                <form name='style'>
+                    <div class="form-size">
+                        <h2>Font Size:</h2>
+                        <input type="radio" onclick='fontSize()' name='size' value='12px'><span>12px</span>
+                        <input type="radio" onclick='fontSize()' name='size' value='14px' checked><span>14px</span>
+                        <input type="radio" onclick='fontSize()' name='size' value='16px'><span>16px</span>
+                        <input type="radio" onclick='fontSize()' name='size' value='18px'><span>18px</span>
+                        <input type="radio" onclick='fontSize()' name='size' value='20px'><span>20px</span>
+                    </div>
+                    <div class="font-family">
+                        <h2>Font Family:</h2>
+                        <select id='fontFamily'>
+                            <option value="" selected>Choose option</option>
+                            <option value="cursive">cursive</option>
+                            <option value="monospace">monospace</option>
+                            <option value="fantasy">fantasy</option>
+                            <option value="sans-serif">sans-serif</option>
+                        </select>
+                    </div>
+                    <div class="text-color">
+                        <h2>Color</h2>
+                        <input type="button" id='btn-txt-color' class='btn-text-color' value="Color of text">
+                        <input type="button" id='btn-bg-color' class='btn-bg-color' value="Color of background">
+                        <div id="color" class="colors hide">
+                            <div onclick="changeText()"   class="color-box brown">brown</div>
+                            <div onclick="changeText()"   class="color-box blue">blue</div>
+                            <div onclick="changeText()"   class="color-box green">green</div>
+                            <div onclick="changeText()"   class="color-box yellow">yellow</div>
+                            <div onclick="changeText()"   class="color-box red">red</div>
+                            <div onclick="changeText()"   class="color-box grey">grey</div>
+                            <div onclick="changeText()"   class="color-box pink">pink</div>
+                            <div onclick="changeText()"   class="color-box orange">orange</div>
+                            <div onclick="changeText()"   class="color-box violet">violet</div>
+                        </div>
+                        <div id="bgcolor" class="bg__colors hide">
+                            <div onclick="changeBackground()"  class="color-box brown">brown</div>
+                            <div onclick="changeBackground()"  class="color-box violet">violet</div>
+                            <div onclick="changeBackground()"  class="color-box orange">orange</div>
+                            <div onclick="changeBackground()"  class="color-box pink">pink</div>
+                            <div onclick="changeBackground()"  class="color-box grey">grey</div>
+                            <div onclick="changeBackground()"  class="color-box red">red</div>
+                            <div onclick="changeBackground()"  class="color-box yellow">yellow</div>
+                            <div onclick="changeBackground()"  class="color-box green">green</div>
+                            <div onclick="changeBackground()"  class="color-box blue">blue</div>
+                        </div>
+                    </div>
+                    <div class='form-style'>
+                        <input type="checkbox" onclick="fontWeight()"><span>Bold text</span>
+                    </div>
+                    <div class='form-style'>
+                        <input type="checkbox" onclick="fontCursive()"><span>Cursive text</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container2 none" id="container2">
+     <form  id="formTableList">
+    <h1 class="trtdtext">Choose what you want:</h1>
+    <input onchange="tableOrList()" type="radio" name="choose" value='table'><span>Table</span>
+    <input  onchange="tableOrList()" type="radio" name="choose" value='list'><span>List</span>
+     </form>
+     <form id="table__form"  class=" table none">
+<div><input id="countTR" type="text" placeholder="   Count TR:"><span class="trtdtext">Please choose number of TR!</span></div>
+<div><input id="countTD" type="text" placeholder="   Count TD:"><span class="trtdtext">Please choose number of TD!</span></div>
+<p  class="trtdtext">Great! Now add style to your table</p>
+<input id="widthTD" type="text" placeholder="Width of  TD:">
+<input id="heightTD" type="text" placeholder="Height of  TD:">
+<div id="border__styles">
+<div class="d-flex"><p>Width of border<p><input id="borderWidth"  placeholder="   width" type="text"></div>
+<div class="d-flex"><p>Type of border</p><input id="borderStyle" list="type" placeholder="   type" type="text"></div>
+<datalist id="type">
+    <option>solid</option>
+    <option>dashed</option>
+    <option>dotted</option>
+</datalist>
+<div class="d-flex"><p>Color of border</p><input id="borderColor" list="colors" placeholder="   color" type="text"></div>
+    <datalist id="colors">
+        <option>green</option>
+        <option>blue</option>
+        <option>red</option>
+        <option>grey</option>
+        <option>yellow</option>
+        <option>orange</option>
+    </datalist>
+
+
+</div>
+<input value="Create Table" type="button" id="create">
+     </form>
+     <form id="list__form"  class="list__form none">
+      <div><span class="trtdtext">Count Li  :  </span><input id="numberOfList" type="text" placeholder="Count Li:"></div>
+      <div><span class="trtdtext">Type of Marks  :  </span><input id="listMark" onchange="checkMark()" list="marks" type="text" placeholder="Count Li:"></div>
+        <datalist id="marks">
+   <option>circle</option>
+   <option>disc</option>
+   <option>square</option>
+   <option>demical</option>
+   <option>trad-chinese-informal</option>
+   <option>georgian</option>
+   <option>kannada</option>
+        </datalist>
+        <input value="Create List" type="button" id="createList">
+            </form>
+   </div>
+  </div>
+</div>
+      
+    </div>
+
+   <script src="javascriptcopy.js"></script> 
+</body>
+</html>

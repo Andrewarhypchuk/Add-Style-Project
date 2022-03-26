@@ -1,0 +1,256 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* CONTAINER */
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+.blue2{
+    height:30px;
+    min-width:80px;
+    width:27%;
+    background-color: rgb(68, 68, 240);
+    color:white;
+    border:none;
+    border-radius: 5px;
+    font-size: 17px;
+    transition-duration: 1s;
+}
+.blue2:hover{
+    background-color: rgb(23, 23, 238);
+}
+.container2{
+    padding:20px;
+    width:800px;
+    height:100%;
+    min-height:300px;
+    background-color: lightgray;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height:250px;
+    height:100%;
+    border-radius: 5px;
+    background-color: lightgray;
+    margin: 20px 0;
+    padding: 20px;
+    position: relative;
+}
+
+.edit-block-none, .style-block-none {
+    display: none;
+}
+
+.edit-area {
+    width: 650px;
+    height: 200px;
+    resize: none;
+}
+
+.colors {
+    width: 150px;
+    height: 150px;
+    outline: 1px solid #000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.bg__colors {
+    width: 150px;
+    height: 150px;
+    outline: 1px solid #000;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.color-box {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+.hide2 {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.table{
+    display: flex;
+    flex-direction: column;
+}
+.table input{
+    margin:10px;
+    width:170px;
+    height:40px
+
+}
+.trtdtext{
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 600;
+    color:rgb(66, 80, 93);
+    
+}
+#countTR,#countTD,#widthTD,#heightTD,#list__form input{
+    border-radius: 10px;
+border:2px solid rgb(66, 80, 93);
+min-height:40px;
+min-width:200px;
+font-size: 20px;
+}
+#border__styles{
+    display: flex;
+}
+#border__styles div{
+    display: flex;
+}
+
+
+/* .color-box:nth-of-type(1) {
+    background-color: green;
+} */
+.green{
+    background-color: green;
+    color:green;
+}
+.pink{
+    background-color: pink;
+    color: pink;
+}
+.blue{
+    background-color: blue;
+    color: blue;
+}
+.yellow{
+    background-color: yellow;
+    color:yellow
+}
+.violet{
+    background-color: rgb(116, 9, 116);
+    color:rgb(116, 9, 116);
+}
+.orange{
+    background-color: rgb(190, 110, 6);
+    color: rgb(190, 110, 6);
+}
+.grey{
+    background-color: grey;
+    color: grey;
+}
+.red{
+    background-color: red;
+    color: red;
+}
+
+.brown{
+    background-color: brown;
+    color: brown;
+}
+.bold{
+    font-weight: 700;
+}
+.cursive{
+    font-family: cursive;
+}
+.list__form {
+    width:80%;
+    height:200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+#create,#createList{
+    padding: 10px;
+    min-height:40px;
+    margin:5px;
+    min-width:140px;
+    max-width: 170px;
+    background-color: rgb(68, 68, 240);
+    color:white;
+    font-family: monospace;
+    border:none;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-top:10px;
+    margin:0 auto;
+    margin-bottom: 15px;
+}
+#create:hover{
+  background-color:  rgb(23, 23, 238);
+}
+#table__form input{
+    width:150px;
+    height:20px;
+}
+#formTableList{
+    height:90px;
+    width:90%;
+
+}
+#formTableList span{
+    font-size: 35px;
+    font-family: monospace;
+    
+    font-weight: 600;
+    color:rgb(66, 80, 93);
+}
+#formTableList input{
+    font-size: 35px;
+    margin:20px;
+}
+#border__styles{
+    display: flex;
+    flex-direction: column;
+}
+#border__styles p{
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: 600;
+    color:rgb(66, 80, 93);
+}
+#border__styles input{
+    font-size: 20px;
+    border-radius: 10px;
+    border:2px solid rgb(66, 80, 93);
+    min-width:200px;
+    min-height:40px;
+
+}
+.d-flex{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.none{
+    display: none;
+}
+
+
